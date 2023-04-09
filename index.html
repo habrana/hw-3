@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS Practice</title>
+		<style>
+
+			body {
+			  background-color: #fff0eb;
+			}
+						input[type=checkbox]{
+				accent-color: yellow;
+			}
+
+			input[type=radio]{
+				accent-color: red;
+			}
+
+
+			input[type=range]{
+				accent-color: tomato;
+			}
+
+			progress{
+				accent-color: chartreuse;
+			}
+
+			#main{
+				width: 70px;
+				height: 400px;
+				border: 1px solid #ea1ccf;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+			}
+			#main div{
+				width: 70px;
+				height: 70px;
+			}
+
+			#main2{
+				width: 500px;
+				height: 500px;
+				border: 10px solid Yellow;
+				display: flex;
+				
+			}
+
+			#main2 div{
+				flex:1;
+				border: 3px solid black;
+				display: flex;
+				
+			}
+
+
+			#main3 {
+			  width: 220px;
+			  height: 300px;
+			  border: 1px solid red;
+			  display: flex;
+			  align-items: flex-start;
+			}
+
+			#main3 div {
+			  flex: 1;
+			}
+
+			#myBlueDiv {
+			  align-self: center;
+			}
+
+
+
+		#ex1 {
+		  background-color: yellow;
+		  color: red;
+		}
+
+		#ex2 {
+		  background-color: yellow;
+		  color: red;
+		  all: inherit;
+		}
+
+		#ex3 {
+		  background-color: yellow;
+		  color: red;
+		  all: initial;
+		}
+
+		#ex4 {
+		  background-color: yellow;
+		  color: red;
+		  all: unset;
+		}
+
+
+		#animation1 {
+		  width: 100px;
+		  height: 100px;
+		  background: red;
+		  position: relative;
+		  animation: mymove 1s infinite;
+		}
+
+		@keyframes mymove {
+		  from {left: 0px;}
+		  to {left: 200px;}
+		}
+
+		#animation2 {
+		  width: 100px;
+		  height: 100px;
+		  background: green;
+		  position: relative;
+		  animation: mm 5s infinite;
+		  animation-delay: 1s;
+		}
+
+		@keyframes mm {
+		  from {left: 0px;}
+		  to {left: 200px;}
+		}
+
+
+	#animation3 {
+	  width: 100px;
+	  height: 100px;
+	  background: red;
+	  position: relative;
+	  animation: first 5s 2;
+	  animation-direction: alternate;
+	}
+
+	@keyframes first {
+	  0%   {background: red; left: 0px; top: 0px;}
+	  25%  {background: yellow; left: 200px; top: 0px;}
+	  50%  {background: blue; left: 200px; top: 200px;}
+	  75%  {background: green; left: 0px; top: 200px;}
+	  100% {background: red; left: 0px; top: 0px;}
+	}
+
+
+	#borderr{
+		border-style: solid;
+  		border-color: coral;
+	}
+
+
+
+	#leff {
+  border-left: 5px solid red;
+	}
+
+	#leff1 {
+	  border-left: 4px dotted blue;
+	}
+
+	#leff2 {
+	  border-left: double;
+	}
+
+
+	#riff {
+  border-right: 5px solid red;
+}
+
+#riff1 {
+  border-right: 4px dotted blue;
+}
+
+#riff2 {
+  border-right: double;
+}
+
+
+
+		</style>
+	</head>
+	<body>
+
+		<!-- Accent color -->
+		
+		<h1>The accent-color Property</h1>
+
+		<h3>Accent color for checkboxes:</h3>
+		<input type="checkbox" id="plane" name="plane" value="plane" checked>
+		<label for="plane">I have a Air Plane</label>
+		<br>
+
+		<input type="checkbox" id="shop" name="shop" value="plane" checked>
+		<label for="shop">I have a shop</label>
+
+		<h3>Accent color for radiobuttons:</h3>
+		<input type="radio" id="html" name="fav" value="HTML">
+		<label for="html">HTML</label>
+		<br>
+
+		<input type="radio" id="css" name="fav" value="CSS">
+		<label for="css">BANANA</label>
+		<br>
+
+		<h3>Accent color for a range field:</h3>
+		<label for="vol">Volume:</label>
+		<input type="range" id="vol" name="vol" min="0" max="50">
+
+		<h3>Accent color for a prograss element:</h3>
+		<label for="file">Downloading progress</label>
+		<progress id="file" value="80" max="100">80%</progress>
+
+		<!--  --  -->
+
+		<h1>The align-content property</h1>
+
+		<div id="main">
+			<div style="background-color: red;"></div>
+		<div style="background-color:blue"></div>
+
+		<div style="background-color:pink"></div>
+
+		</div>
+		<br><br>
+
+		<!----- ----   ------>
+		<div id="main2">
+			<div style="background-color: blue; min-height: 30px;">blue</div>
+
+			<div style="background-color:red;min-height: 50px;">red</div>
+
+			<div style="background-color:green; min-height: 200px;">green</div>
+
+		</div>
+		<br><br>
+
+		<!------------------------->
+
+	<div id="main3">
+    <div style="background-color:yellow;">RED</div>
+
+    <div style="background-color:lightblue;" id="myBlueDiv">BLUE</div> 
+
+    <div style="background-color:lightgreen;">Green div with more content.</div>
+    </div>
+
+
+	    <p>No all property:</p>
+	<div id="ex1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+	<p>all: inherit:</p>
+	<div id="ex2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+	<p>all: initial:</p>
+	<div id="ex3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+	<p>all: unset:</p>
+	<div id="ex4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+
+	<div id="animation1"></div><br>
+	<div id="animation2"></div><br>
+	<div id="animation3"></div><br>
+
+	
+
+     <div id="borderr">The border-color can be specified with a color name.</div>
+
+
+    <h1 id="leff">A heading with a solid red left border</h1>
+
+<h2 id="leff1">A heading with a dotted blue left border</h2>
+
+<div id="leff2">A div element with a double left border.</div>
+
+
+<h1 id="riff">A heading with a solid red right border</h1>
+
+<h2 id="riff1">A heading with a dotted blue right border</h2>
+
+<div id="riff2">A div element with a double right border.</div>
+
+
+
+
+	</body>
+</html>
